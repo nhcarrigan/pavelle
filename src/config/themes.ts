@@ -77,9 +77,9 @@ const gifs: Record<Theme, Array<string>> = {
     "https://i.hep.gg/qEfn3EGG8.gif",
     "https://i.hep.gg/ZVv86odHak.gif",
     "https://i.hep.gg/2NSMExuNI.gif",
-    "https://tenor.com/view/steve-aoki-cake-face-gif-5705436",
-    "https://tenor.com/view/gritty-cake-gif-25910058",
-    "https://tenor.com/view/steve-aoki-cake-face-gif-5705438",
+    "https://c.tenor.com/pVLQQYSX2rIAAAAd/tenor.gif",
+    "https://c.tenor.com/S-Ch14cZ0L8AAAAd/tenor.gif",
+    "https://c.tenor.com/P0wUffEoLHIAAAAd/tenor.gif",
   ],
 };
 
