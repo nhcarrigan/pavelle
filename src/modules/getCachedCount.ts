@@ -13,5 +13,5 @@ import type { Pavelle } from "../interfaces/pavelle.js";
  * @returns The number of throws remaining.
  */
 export const getCachedCount = (pavelle: Pavelle, id: string): number => {
-  return pavelle.throwCache.get(id) ?? 3;
+  return pavelle.throwCache.get(id) ?? 10;
 };
