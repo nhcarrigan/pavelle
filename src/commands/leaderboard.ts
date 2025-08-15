@@ -27,14 +27,14 @@ export const leaderboard: Command = async(pavelle, interaction) => {
     });
 
     const topTen = sorted.slice(0, 10).map((member, index) => {
-      return `- **#${index.toString()}:** <@${member.userId}> - ${member.points.toString()} point(s).`;
+      return `- **#${(index + 1).toString()}:** <@${member.userId}> - ${member.points.toString()} point(s).`;
     }).
       join("\n");
     const yourScore = sorted.find((member) => {
       return member.userId === interaction.member.id;
     });
     const yourRank = yourScore
-      ? `You are rank #${sorted.indexOf(yourScore).toString()} with ${yourScore.points.toString()} points.`
+      ? `You are rank #${(sorted.indexOf(yourScore) + 1).toString()} with ${yourScore.points.toString()} points.`
       : "You are not ranked. Try throwing some stuff!";
     await interaction.editReply({
       allowedMentions: {
