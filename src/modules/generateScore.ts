@@ -4,6 +4,7 @@
  * @author Naomi Carrigan
  */
 
+import { randomInt } from "node:crypto";
 import { Score } from "../interfaces/score.js";
 
 /**
@@ -13,7 +14,7 @@ import { Score } from "../interfaces/score.js";
  * @returns The number of points the user earned.
  */
 export const generateScore = (): number => {
-  const random = Math.floor(Math.random() * 100);
+  const random = randomInt(1, 101);
   if (random < 10) {
     return Score.COUNTER;
   }
