@@ -4,7 +4,7 @@
  * @author Naomi Carrigan
  */
 
-import { PermissionFlagBits } from "discord.js";
+import { PermissionFlagsBits } from "discord.js";
 import { errorHandler } from "../utils/errorHandler.js";
 import { isTheme } from "../utils/typeguards.js";
 import type { Command } from "../interfaces/command.js";
@@ -16,7 +16,7 @@ import type { Command } from "../interfaces/command.js";
  */
 export const config: Command = async(pavelle, interaction) => {
   try {
-    if (!interaction.member.permissions.has(PermissionFlagBits.ManageServer)) {
+    if (!interaction.member.permissions.has(PermissionFlagsBits.ManageGuild)) {
       await interaction.editReply({
         content: "No no no, you cannot do this.",
       });
