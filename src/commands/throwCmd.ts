@@ -87,7 +87,7 @@ export const throwCmd: Command = async(pavelle, interaction) => {
     );
     await interaction.editReply({
       allowedMentions: {
-        parse: [ "users" ],
+        parse: [ ],
       },
       components: components,
       flags:      [ MessageFlags.IsComponentsV2 ],

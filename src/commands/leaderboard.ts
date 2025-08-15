@@ -37,6 +37,9 @@ export const leaderboard: Command = async(pavelle, interaction) => {
       ? `You are rank #${sorted.indexOf(yourScore).toString()} with ${yourScore.points.toString()} points.`
       : "You are not ranked. Try throwing some stuff!";
     await interaction.editReply({
+      allowedMentions: {
+        parse: [],
+      },
       components: [
         {
           // eslint-disable-next-line @typescript-eslint/naming-convention -- Discord API convention.
