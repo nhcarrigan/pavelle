@@ -11,6 +11,7 @@ import {
   Events,
 } from "discord.js";
 import { scheduleJob } from "node-schedule";
+import { processButton } from "./modules/processButton.js";
 import { processCommand } from "./modules/processCommand.js";
 import { instantiateServer } from "./server/serve.js";
 import { logger } from "./utils/logger.js";
@@ -32,13 +33,15 @@ pavelle.discord.once(Events.ClientReady, () => {
 });
 
 pavelle.discord.on(Events.InteractionCreate, (interaction) => {
-  if (!interaction.isChatInputCommand()) {
-    return;
-  }
   if (!interaction.inCachedGuild()) {
     return;
   }
-  void processCommand(pavelle, interaction);
+  if (interaction.isChatInputCommand()) {
+    void processCommand(pavelle, interaction);
+  }
+  if (interaction.isButton()) {
+    void processButton(pavelle, interaction);
+  }
 });
 
 pavelle.discord.on(Events.Error, (error) => {

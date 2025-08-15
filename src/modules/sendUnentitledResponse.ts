@@ -11,6 +11,7 @@ import {
   MessageFlags,
   TextDisplayBuilder,
   type ChatInputCommandInteraction,
+  type ButtonInteraction,
 } from "discord.js";
 
 /**
@@ -18,7 +19,7 @@ import {
  * @param interaction - The interaction object from Discord.
  */
 export const sendUnentitledResponse = async(
-  interaction: ChatInputCommandInteraction,
+  interaction: ChatInputCommandInteraction | ButtonInteraction,
 ): Promise<void> => {
   const components = [
     new TextDisplayBuilder().setContent(

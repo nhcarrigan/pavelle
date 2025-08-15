@@ -144,6 +144,27 @@ export const getThrowComponents = (
           content: `-# You now have ${total.toString()} point(s).\n-# You have ${count.toString()} remaining throws for the hour.`,
           type:    10,
         },
+        {
+          components: [
+            {
+              // eslint-disable-next-line @typescript-eslint/naming-convention -- Discord API convention.
+              custom_id: "throw",
+              disabled:  false,
+              label:     "Throw another!",
+              style:     3,
+              type:      2,
+            },
+            {
+              // eslint-disable-next-line @typescript-eslint/naming-convention -- Discord API convention.
+              custom_id: "leaderboard",
+              disabled:  false,
+              label:     "Check leaderboard",
+              style:     1,
+              type:      2,
+            },
+          ],
+          type: 1,
+        },
       ],
       spoiler: false,
       type:    17,

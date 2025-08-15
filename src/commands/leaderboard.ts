@@ -5,6 +5,8 @@
  */
 
 import { MessageFlags } from "discord.js";
+import { checkGuildEntitlement } from "../modules/checkEntitlement.js";
+import { sendUnentitledResponse } from "../modules/sendUnentitledResponse.js";
 import { errorHandler } from "../utils/errorHandler.js";
 import type { Command } from "../interfaces/command.js";
 
@@ -16,6 +18,11 @@ import type { Command } from "../interfaces/command.js";
 // eslint-disable-next-line max-lines-per-function -- Lazy.
 export const leaderboard: Command = async(pavelle, interaction) => {
   try {
+    const isEntitled = await checkGuildEntitlement(pavelle, interaction.guild);
+    if (!isEntitled) {
+      await sendUnentitledResponse(interaction);
+      return;
+    }
     const members = await pavelle.db.users.findMany({
       where: {
         serverId: interaction.guild.id,

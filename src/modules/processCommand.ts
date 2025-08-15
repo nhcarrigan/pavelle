@@ -4,7 +4,7 @@
  * @author Naomi Carrigan
  */
 
-import { handlers } from "../config/handlers.js";
+import { commandHandlers as handlers } from "../config/handlers.js";
 import type { Command } from "../interfaces/command.js";
 
 /**
