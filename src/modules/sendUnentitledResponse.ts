@@ -28,7 +28,7 @@ export const sendUnentitledResponse = async(
     new ActionRowBuilder<ButtonBuilder>().addComponents(
       new ButtonBuilder().
         setStyle(ButtonStyle.Premium).
-        setSKUId("1405735335949766716"),
+        setSKUId("1405735774376296460"),
     ),
   ];
   await interaction.editReply({
