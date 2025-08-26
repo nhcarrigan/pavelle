@@ -19,7 +19,7 @@ const html = `<!DOCTYPE html>
   <body>
     <main>
     <h1>Pavelle</h1>
-    <img src="https://cdn.nhcarrigan.com/new-avatars/pavelle.png" width="250" alt="Pavelle" />
+    <img src="https://cdn.nhcarrigan.com/new-avatars/pavelle-full.png" width="250" alt="Pavelle" />
     <section>
       <p>Discord bot that allows you to throw things (like cake) at your fellow server members. </p>
       <a href="https://discord.com/oauth2/authorize?client_id=1405735335949766716" class="social-button discord-button" style="display: inline-block; background-color: #5865F2; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin: 5px;">
